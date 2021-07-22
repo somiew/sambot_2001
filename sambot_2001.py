@@ -34,7 +34,8 @@ async def on_voice_state_update(member, before, after):
         inVoicechat.append(str(member))
 
     flp.clear()
-    flp.print_float(len(inVoicechat))
+    flp.print_str(str(len(inVoicechat)))
+    flp.show()
     
 
 @client.command()
