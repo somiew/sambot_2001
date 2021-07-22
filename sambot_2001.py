@@ -37,7 +37,6 @@ async def on_voice_state_update(member, before, after):
     flp.print_float(len(inVoicechat))
     
 
-
 @client.command()
 async def ping(ctx):
     await ctx.send('pong')
