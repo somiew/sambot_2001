@@ -30,8 +30,13 @@ async def on_message(message):
 async def on_voice_state_update(member, before, after):
     if after.channel == None:
         inVoicechat.remove(str(member))
+        print(inVoicechat)
     else:
-        inVoicechat.append(str(member))
+        if str(member) in inVoicechat:
+            print(str(member) + " already in list")
+        else:
+            inVoicechat.append(str(member))
+            print(inVoicechat)
 
     flp.clear()
     flp.print_str(str(len(inVoicechat)))
